@@ -1,0 +1,26 @@
+Data Structure in Java
+
+1. Array
+2. String
+3. List
+4. Stack
+5. Queue
+6. Map
+7. Set
+
+--------------------------------------------------------
+ Array
+    * Store element of the same data type
+    * Element can be accessed directly by using its index
+    * non-primitive, homogeneous
+
+ Advantages of Array
+    * Code Optimization
+    * Random Access
+    * Easy to traverse data
+    * Easy to manipulate data
+    * Easy to sort data
+
+ Type's of Array
+    1. Single dimensional array
+    2. Multi-dimensional array (calculation -> Metrics, Table, Vectors)
