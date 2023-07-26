@@ -1,3 +1,5 @@
+package arrays;
+
 public class MultiDimensionArrayExample {
     public static void main(String[] args) {
         /* Store 5 different subject marks for 3 different students */

@@ -1,1 +1,3 @@
-# Data_Structures-Java
+# Data Structures - Java
+
+### IDE: IntelliJ 2023
