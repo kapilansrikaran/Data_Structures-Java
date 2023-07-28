@@ -25,6 +25,40 @@ Data Structure in Java
     1. Single dimensional array
     2. Multi-dimensional array (calculation -> Metrics, Table, Vectors)
 
- Links:
-    https://www.geeksforgeeks.org/arrays-in-java/
+--------------------------------------------------------------
+ String
+    * A String is an object that represents a sequence of characters.
+    * It is used to store and manipulate
+    * String are immutable, which means once a string object is created. its value cannot be changed.
+    * However, you can create new string by performing various operations in existing strings.
 
+ There are two ways to create a String Object:
+    1. By String Literal - Java String literal is created by using double quotes
+            String s = "Kapilan";
+    2. By new key word
+            String s = new String("Kapilan");
+
+ Type of String
+    1. Immutable String - Can't be changed - String class (Using String Literal or double quotes)
+    2. Mutable String  - Can be changed - StringBuilder class (StringBuffer)
+
+ String Methods
+    - String Split() - Splits the sting at the specified string (regex)
+    - String CompareTo() - Compares two strings in the dictionary order
+    - String length() - Returns the length of the string
+    - String replace() - Replace all matching characters/text in the string
+    - String contains() - Checks whether the string contains a substring
+    - String trim() - Removes any leading and trailing whitespace
+    - String concat() - Concatenates two strings and returns it
+    - String indexOf() - Returns the index of the character/substring
+
+ StringBuffer
+    - It's a class and Mutable sequence of characters
+    - Can change contents of the buffer without creating a new object.
+    - It provides an alternative to the immutable String class, allowing you to modify the contents of a string without creating a new object every time.
+
+ StringBuffer Methods
+    - append() - used to add characters, strings or others to the end of the buffer.
+    - insert() - used to insert characters, strings, or other objects at a specified position in buffer.
+    - delete() - used to remove characters from the buffer.
+    - reverse() - used to revers the order of the character in the buffer.

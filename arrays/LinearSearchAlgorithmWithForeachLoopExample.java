@@ -14,7 +14,8 @@ public class LinearSearchAlgorithmWithForeachLoopExample {
 
         // check whether the given key value is present inside my array
         System.out.print("Enter the Search Number: ");
-        int key = scan.nextInt();
+        int key;
+        key = scan.nextInt();
         boolean found = false;
 
         for(int num: arr){
