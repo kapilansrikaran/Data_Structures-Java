@@ -8,7 +8,7 @@ Data Structure in Java
 6. Map
 7. Set
 
---------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
  Array
     * Store element of the same data type
     * Element can be accessed directly by using its index
@@ -25,7 +25,11 @@ Data Structure in Java
     1. Single dimensional array
     2. Multi-dimensional array (calculation -> Metrics, Table, Vectors)
 
---------------------------------------------------------------
+ Learn More: Array in Java
+ -  https://www.javatpoint.com/array-in-java
+
+------------------------------------------------------------------------------------------------------------------------
+
  String
     * A String is an object that represents a sequence of characters.
     * It is used to store and manipulate
@@ -39,8 +43,10 @@ Data Structure in Java
             String s = new String("Kapilan");
 
  Type of String
-    1. Immutable String - Can't be changed - String class (Using String Literal or double quotes and "new" key word)
-    2. Mutable String  - Can be changed - StringBuilder class (StringBuffer)
+    1. Immutable String - Can't be changed (cannot grow)
+        - String class (Using String Literal or double quotes and "new" key word)
+    2. Mutable String  - Can be changed
+        - StringBuilder class (StringBuffer)
 
  String Methods
     - String Split() - Splits the sting at the specified string (regex)
@@ -55,10 +61,155 @@ Data Structure in Java
  StringBuffer
     - It's a class and Mutable sequence of characters
     - Can change contents of the buffer without creating a new object.
-    - It provides an alternative to the immutable String class, allowing you to modify the contents of a string without creating a new object every time.
+    - It provides an alternative to the immutable String class, allowing you to modify the contents of
+      a string without creating a new object every time.
 
  StringBuffer Methods
     - append() - used to add characters, strings or others to the end of the buffer.
     - insert() - used to insert characters, strings, or other objects at a specified position in buffer.
     - delete() - used to remove characters from the buffer.
     - reverse() - used to revers the order of the character in the buffer.
+
+ String Pool in Java
+    (To store Strings with the same value in a common memory area for better performance and memory utilization.)
+    String pool is nothing but a storage area in Java heap where string literals stores.
+    It is also known as String Intern Pool or String Constant Pool.
+    It is just like object allocation.
+    By default, it is empty and privately maintained by the Java String class
+
+ Learn More: String in Java
+    - https://www.scaler.com/topics/java/strings-in-java-vs-strings-in-cpp/
+    - https://www.javatpoint.com/java-string
+
+------------------------------------------------------------------------------------------------------------------------
+ Java Collection Framework
+    (All had it during our childhood, where we used to store our coins.
+    The piggy bank is called the collection and the coins are nothing but objects.
+    A collection is an object or a container that stores a group of other objects.)
+
+    * Collection Framework provides an architecture to store and manipulate a group of objects.
+    * Reduces the effort required to write the code by providing data structures and algorithms.
+    * Provides high-performance and high-quality data structure thereby increasing the speed.
+
+    Java Collection Framework includes the following:
+        - Interface
+        - Classes
+        - Algorithm
+
+    When we say interface; an interface is an abstract type of object.
+    It is in top-most position in the framework hierarchy.
+    Consider it in a layman term, it is a group of related methods with empty bodies.
+    Also you can call it as an abstraction,
+    which is a process of hiding the implementation details from the user and by providing the functionality only.
+
+    we have Algorithm. It is a method that perform useful calculation, computation and comparison.
+    Suggest searching and sorting on objects that implement collection interface.
+
+    Learn More:
+        https://www.geeksforgeeks.org/collections-in-java-2/
+
+ -----------------------------------------------------------------------------------------------------------------------
+
+ The Collection Interface
+     * The Collection Interface is a member of the java Collections Frame work.
+     * The Collection Interface is a root interface of Java collections framework.
+     * There is no direct implementation of this interface by any class.
+     * However, it is implemented through its sub interfaces like List,Set, and Queue.
+     * All classes of collection framework implement the sub interface of the Collection Interface.
+
+    Learn More:
+        https://www.geeksforgeeks.org/collection-interface-in-java-with-examples/
+
+ -----------------------------------------------------------------------------------------------------------------------
+ List Interface
+    * List interface that extends the collection interface
+    * A List is an ordered collection of elements that allows duplicate elements.
+    * Ordered collection means the order in which the elements are being inserted and they contain a specific value.
+      The element presence can be accessed or inserted by their position in the list by using zero based indexing
+      where the index starts from zero.
+    * The List interface in Java provides a way to store the ordered collection.
+    * The List interface is found in java.util package and inherits the collection interface
+    * There are several classes in Java that implement the List interface, including:
+        - Vector
+        - ArrayList
+        - LinkedList
+
+    Learn More: https://www.geeksforgeeks.org/list-interface-java-examples/
+
+ -----------
+ ArrayList
+    * This class provides a resizable array implementation of the List Interface
+    * It is similar to an array but can dynamically increase or decrease its size as elements are added or removed.
+    * Since the ArrayList cannot be used for the primitive data types like int caterer Integer,
+      you need to use a wrapper classes, which starts from the capital letter.
+
+    Syntax:
+        ArrayList object = new ArrayList();
+
+ ArrayList Methods
+    * boolean add(Collection c)
+        - Appends the specified element to the end of a list
+    * void add(int index, Object element)
+        - Inserts the specified element at the specified position.
+    * Void clear()
+        - Removes all the elements from the list
+    * int lastindexOf(Object o)
+        - Return the index in this list of the last occurrence of the specified element,
+          or -1 if the list does not contain this element.
+    * Object clone()
+        - Return a shallow copy of an ArrayList.
+    * Object[] to Array()
+        - Return a shallow copy of an ArrayList.
+    * void trimToSize()
+        - Trims the capacity of this ArrayList instance to be list's current size.
+
+ Learn More: https://www.geeksforgeeks.org/arraylist-in-java/
+
+ ----------
+ LinkedList
+    * LinkedList class that extends the list Deque and Queue interface.
+    * Elements are called nodes.
+    * LinkedList class by default added into this collection interface.
+
+ ----------
+ Vector
+    * Vector is like the dynamic array which can grow or shrink its size.
+    * Unlike array, we can store n-number of elements in it as there is no size limit.
+    * It is found in the java.util package and implements the List interface
+    *  One important thing that you need to understand,
+       when it is synchronized it means only one thread at a time can access the code.
+       This means if one thread is working on Vector, no other thread can get a hold of it.
+
+    Syntax:
+        public class Vector<E> extends AbstractList<E> implements List<E>, RandomAccess, Cloneable, Serializable
+        Here, E is the type of element like Integer, String
+
+     * The element of the vector object can be accessed via an index into the vector.
+     * It is similar to ArrayList, but mainly two differences:
+        -  Vector is synchronized
+        -  Vector contains many legacy methods that are not part of the collection framework.
+
+ Vector Methods
+    * add()
+        - It is used to append the specified element in the given Vector.
+    * addAll()
+        - It is used to append all of elements in specified collection to the end of this Vector.
+    * addElement()
+        - It is used to append the specified component to the end of this Vector.
+    * capacity()
+        - It is used to get the current capacity of this Vector
+    * contains()
+        - It returns true if the Vector contains the specified element.
+    * equals()
+        - It is used to compare the specified object with the Vector for equality.
+    * get()
+        - It is used ti get an element at the specified position in the vector.
+    * indexOf()
+        - It is used to get the index of the first occurrence of the specified element in the Vector.
+
+
+ Learn More:
+    https://www.geeksforgeeks.org/java-util-vector-class-java/
+
+
+ -----------------------------------------------------------------------------------------------------------------------
