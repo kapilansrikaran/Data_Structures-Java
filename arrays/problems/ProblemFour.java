@@ -12,15 +12,14 @@ public class ProblemFour {
 
         int[] revArray = new int[5];
         for (int i = size-1; 0 <=i ; i--) {
-            while(true){
-                revArray[j]=arr[i];
-                j=j+1;
-                break;
-            }
+            revArray[j]=arr[i];
+            j=j+1;
         }
-        for (int num: revArray
-             ) {
-            System.out.println(num);
+
+        System.out.print("[");
+        for (int num: revArray) {
+            System.out.print(num + "\t");
         }
+        System.out.print("]");
     }
 }

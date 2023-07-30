@@ -10,7 +10,7 @@ public class ProblemTwo {
     int[] a = {2,5,6,10,12};
     int[] b = {10,6,1,3};
 
-    int[] res = new int[5];
+    int[] res = new int[2];
         for (int i = 0; i < a.length; i++) {
             for (int j = 0; j < b.length; j++) {
                 if(a[i] == b[j]){

@@ -19,7 +19,7 @@ public class ProblemOne {
         }
 
         for(int num : squarArry){
-            System.out.print(num + " , " );
+            System.out.print(num + "\t" );
         }
     }
 }

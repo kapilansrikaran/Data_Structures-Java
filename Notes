@@ -12,7 +12,9 @@ Data Structure in Java
  Array
     * Store element of the same data type
     * Element can be accessed directly by using its index
-    * non-primitive, homogeneous
+    * non-primitive,
+        - The eight primitives Data Types defined in Java are int, byte, short, long, float, double, boolean and char.
+    * homogeneous
 
  Advantages of Array
     * Code Optimization
@@ -46,7 +48,7 @@ Data Structure in Java
     1. Immutable String - Can't be changed (cannot grow)
         - String class (Using String Literal or double quotes and "new" key word)
     2. Mutable String  - Can be changed
-        - StringBuilder class (StringBuffer)
+        - StringBuilder and StringBuffer class
 
  String Methods
     - String Split() - Splits the sting at the specified string (regex)
@@ -114,7 +116,7 @@ Data Structure in Java
      * The Collection Interface is a member of the java Collections Frame work.
      * The Collection Interface is a root interface of Java collections framework.
      * There is no direct implementation of this interface by any class.
-     * However, it is implemented through its sub interfaces like List,Set, and Queue.
+     * However, it is implemented through its sub interfaces like List, Set, and Queue.
      * All classes of collection framework implement the sub interface of the Collection Interface.
 
     Learn More:
@@ -144,7 +146,7 @@ Data Structure in Java
       you need to use a wrapper classes, which starts from the capital letter.
 
     Syntax:
-        ArrayList object = new ArrayList();
+        ArrayList<String> object = new ArrayList<String>();
 
  ArrayList Methods
     * boolean add(Collection c)
@@ -182,7 +184,7 @@ Data Structure in Java
 
     Syntax:
         public class Vector<E> extends AbstractList<E> implements List<E>, RandomAccess, Cloneable, Serializable
-        Here, E is the type of element like Integer, String
+        - Here, E is the type of element like Integer, String
 
      * The element of the vector object can be accessed via an index into the vector.
      * It is similar to ArrayList, but mainly two differences:

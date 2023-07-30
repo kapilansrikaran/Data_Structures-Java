@@ -25,7 +25,7 @@ public class LinearSearchAlgorithmExample {
 
         int ans = -1;
 
-        //Iterate over the array and update ans if key is found
+        //Iterate over the array and update answer if key is found
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == key) {
                 ans=i;

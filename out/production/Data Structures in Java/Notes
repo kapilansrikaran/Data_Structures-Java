@@ -8,11 +8,13 @@ Data Structure in Java
 6. Map
 7. Set
 
---------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
  Array
     * Store element of the same data type
     * Element can be accessed directly by using its index
-    * non-primitive, homogeneous
+    * non-primitive,
+        - The eight primitives Data Types defined in Java are int, byte, short, long, float, double, boolean and char.
+    * homogeneous
 
  Advantages of Array
     * Code Optimization
@@ -25,10 +27,11 @@ Data Structure in Java
     1. Single dimensional array
     2. Multi-dimensional array (calculation -> Metrics, Table, Vectors)
 
- Array in Java - Link
+ Learn More: Array in Java
  -  https://www.javatpoint.com/array-in-java
 
---------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
+
  String
     * A String is an object that represents a sequence of characters.
     * It is used to store and manipulate
@@ -42,8 +45,10 @@ Data Structure in Java
             String s = new String("Kapilan");
 
  Type of String
-    1. Immutable String - Can't be changed (cannot grow) - String class (Using String Literal or double quotes and "new" key word)
-    2. Mutable String  - Can be changed - StringBuilder class (StringBuffer)
+    1. Immutable String - Can't be changed (cannot grow)
+        - String class (Using String Literal or double quotes and "new" key word)
+    2. Mutable String  - Can be changed
+        - StringBuilder and StringBuffer class
 
  String Methods
     - String Split() - Splits the sting at the specified string (regex)
@@ -58,7 +63,8 @@ Data Structure in Java
  StringBuffer
     - It's a class and Mutable sequence of characters
     - Can change contents of the buffer without creating a new object.
-    - It provides an alternative to the immutable String class, allowing you to modify the contents of a string without creating a new object every time.
+    - It provides an alternative to the immutable String class, allowing you to modify the contents of
+      a string without creating a new object every time.
 
  StringBuffer Methods
     - append() - used to add characters, strings or others to the end of the buffer.
@@ -73,11 +79,11 @@ Data Structure in Java
     It is just like object allocation.
     By default, it is empty and privately maintained by the Java String class
 
- String in Java - Link
+ Learn More: String in Java
     - https://www.scaler.com/topics/java/strings-in-java-vs-strings-in-cpp/
     - https://www.javatpoint.com/java-string
 
- -----------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
  Java Collection Framework
     (All had it during our childhood, where we used to store our coins.
     The piggy bank is called the collection and the coins are nothing but objects.
@@ -101,19 +107,28 @@ Data Structure in Java
     we have Algorithm. It is a method that perform useful calculation, computation and comparison.
     Suggest searching and sorting on objects that implement collection interface.
 
-    The Collection Interface
-        * The Collection Interface is a member of the java Collections Frame work.
-        * The Collection Interface is a root interface of Java collections framework.
-        * There is no direct implementation of this interface by any class.
-        * However, it is implemented through its sub interfaces like List,Set, and Queue.
-        * All classes of collection framework implement the sub interface of the Collection Interface.
+    Learn More:
+        https://www.geeksforgeeks.org/collections-in-java-2/
 
- -----------------------------------------------------------------------------
+ -----------------------------------------------------------------------------------------------------------------------
+
+ The Collection Interface
+     * The Collection Interface is a member of the java Collections Frame work.
+     * The Collection Interface is a root interface of Java collections framework.
+     * There is no direct implementation of this interface by any class.
+     * However, it is implemented through its sub interfaces like List, Set, and Queue.
+     * All classes of collection framework implement the sub interface of the Collection Interface.
+
+    Learn More:
+        https://www.geeksforgeeks.org/collection-interface-in-java-with-examples/
+
+ -----------------------------------------------------------------------------------------------------------------------
  List Interface
     * List interface that extends the collection interface
     * A List is an ordered collection of elements that allows duplicate elements.
     * Ordered collection means the order in which the elements are being inserted and they contain a specific value.
-      The element presence can be accessed or inserted by their position in the list by using zero based indexing where the index starts from zero.
+      The element presence can be accessed or inserted by their position in the list by using zero based indexing
+      where the index starts from zero.
     * The List interface in Java provides a way to store the ordered collection.
     * The List interface is found in java.util package and inherits the collection interface
     * There are several classes in Java that implement the List interface, including:
@@ -121,6 +136,9 @@ Data Structure in Java
         - ArrayList
         - LinkedList
 
+    Learn More: https://www.geeksforgeeks.org/list-interface-java-examples/
+
+ -----------
  ArrayList
     * This class provides a resizable array implementation of the List Interface
     * It is similar to an array but can dynamically increase or decrease its size as elements are added or removed.
@@ -147,11 +165,15 @@ Data Structure in Java
     * void trimToSize()
         - Trims the capacity of this ArrayList instance to be list's current size.
 
+ Learn More: https://www.geeksforgeeks.org/arraylist-in-java/
+
+ ----------
  LinkedList
     * LinkedList class that extends the list Deque and Queue interface.
     * Elements are called nodes.
     * LinkedList class by default added into this collection interface.
 
+ ----------
  Vector
     * Vector is like the dynamic array which can grow or shrink its size.
     * Unlike array, we can store n-number of elements in it as there is no size limit.
@@ -186,3 +208,10 @@ Data Structure in Java
         - It is used ti get an element at the specified position in the vector.
     * indexOf()
         - It is used to get the index of the first occurrence of the specified element in the Vector.
+
+
+ Learn More:
+    https://www.geeksforgeeks.org/java-util-vector-class-java/
+
+
+ -----------------------------------------------------------------------------------------------------------------------
