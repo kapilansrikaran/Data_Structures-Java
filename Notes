@@ -215,3 +215,45 @@ Data Structure in Java
 
 
  -----------------------------------------------------------------------------------------------------------------------
+ Stack
+    * Stack class extends the Vector class.
+    * Stack is linear data structure in which insertion and deletion of element can be done only at one end call the top
+    * Its top element and works in Last-In-First-Out(LIFO) manner
+    * It also implements interfaces List, Collection, Iterable, Cloneable, Serializable
+    * Put an object on the top of Stack - push Method
+    * remove and return the top element in the Stack - pop Method
+    * Before using the Stack class, we must import the java.util package.
+    * Example: Books Stacked over one another.
+
+    Syntax:
+        Stack<E> stack = new Stack<E>();
+
+    Note:
+     stack extends the vector class and vector implements the Itrable collection and list interface in the multilevel inheritance.
+     So in short, Stack  has the implementation of the methods coming from the iterable,
+     collection and list interface and also from the vector class.
+
+    Applications of Stack:
+        - Browser (Back button)
+        - Tree Traversal (binary tree)
+        - Editors
+        - Recursions
+        - Expression Evaluation
+        - Parsing
+
+ Methods of Stack Class
+    * We can perform push, pop, peek and search operation on the stack
+    * The Java Stack class provides mainly five methods to perform these operations
+
+    * empty()
+        - The method checks the stack is empty or not.
+    * push(E item)
+        - The method pushes (insert) an element onto the top of the stack.
+    * pop()
+        - The method removes an element an from the top of the stack and returns the sane element
+          as the value of that function.
+    * peek()
+        - The method looks at the top element of the stack without removing it.
+    * search(Object o)
+        - The method searches the specified object and returns the position of the object
+
