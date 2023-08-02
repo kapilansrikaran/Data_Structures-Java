@@ -229,8 +229,8 @@ Data Structure in Java
         Stack<E> stack = new Stack<E>();
 
     Note:
-     stack extends the vector class and vector implements the Itrable collection and list interface in the multilevel inheritance.
-     So in short, Stack  has the implementation of the methods coming from the iterable,
+     stack extends the vector class and vector implements the Itrable, collection and list interface in the
+     multilevel inheritance. So in short, Stack  has the implementation of the methods coming from the iterable,
      collection and list interface and also from the vector class.
 
     Applications of Stack:
@@ -257,3 +257,184 @@ Data Structure in Java
     * search(Object o)
         - The method searches the specified object and returns the position of the object
 
+------------------------------------------------------------------------------------------------------------------------
+
+ Queues
+    * Queue is an interface that extends from the collection interface.
+    * The queue in data structure is an ordered, linear sequence of items.
+    * It is a FIFO (First In First Out) data structure.
+    * There are two ends, Insert an item to the rear, remove the item from the front
+    * Queue is a sequential data type, unlike an array
+    * A Queue in data structure can be accessed from both of its side (front for deletion and rear for insertion)
+    * A queue can be implemented using array, linked list, stack or vectors.
+
+ Applications of Queue in Real life
+    - People on an escalator
+    - Cashier line in a store
+    - A car wash line
+    - one way exit
+
+ Basic Queue Operation
+    * enqueue()
+        - process of adding or storing an element to the end of the queue
+    * dequeue()
+        - process of removing or accessing an element from the front of the queue
+    * peek()
+        - Used to get the element at the front of the queue with out removing it
+    * initialize()
+        - Creates an empty queue
+    * isfull()
+        - Check if the queue is full
+    * isempty()
+        - Check if the queue is empty
+
+ What is the Different:
+    Queue vs PriorityQueue
+
+
+------------------------------------------------------------------------------------------------------------------------
+ Map (like a Dictionary)
+    * A Map contains values on the basis of key, i.e key and value pair
+    * Each key and value pair is known as an entry
+    * Map contains unique keys
+    * A Map is useful if you have to search, update or delete elements on the basis of key.
+    * There are two interfaces for implementing Map in Java: Map and SortedMap.
+    * And three classes: HashMap, LinkedHashMap, and TreeMap.
+    * A Map does not allow duplicate keys, but you can have duplicate values.
+    * HashMap and LinkedHashMap allow null keys and values.
+    * but TreeMap doesn't allow any null keys and values.
+
+ Map Methods
+    * Object put(Object Key, Object value)
+        - Inserts an entry in the map
+    * void putAll(Map map)
+        - Inserts the specified map in the map
+    * Object remove(Object key)
+        - Deletes an entry for the specified key
+    * Object get(Object key)
+        - Returns the value for the specified key
+    * boolean containsKey(Object key)
+        - Searches the specified key from this map
+    * Set keySet()
+        - Returns the Set view containing all the keys
+    * Set entrySet()
+        - Returns the Set view containing all the keys and values.
+    * Object getKey()
+        - Used to obtain key
+    * Object getValue()
+        - Used to obtain value
+
+ Map Exceptions
+    * NoSuchElementException
+        - This occurs when no items exist in the invoking map
+    * ClassCastException
+        - This occurs when an object is incompatible with the elements in a map
+    * NullPointerException
+        - This occurs when if an attempt is made to use a null object and null is not allowed in the map
+    * UnsupportedOperationException
+        - This occurs when an attempt is made to change a map which is unmodifiable
+
+ ---------------------------------------
+ HashMap
+    * It provides the basic implementation of the Map interface of Java.
+    * It store the data in (Key, Value) pairs.
+    * To access a value one must know its key
+    * This class uses a technique called Hashing.
+    * Hashing is a technique of converting a large String to a small String that represents same String.
+    * A Shorter value helps in indexing and faster searches.
+
+    * Syntax
+        //HashMap creation with 8 capacity and 0.6 load factor
+        HashMap<K, V> numbers = new HashMap<>();
+
+ HashMap Class Methods
+    * void clear()
+        - It is used to remove all of the mappings for this map.
+    * boolean isEmpty()
+        - It is used to return true if it this map contains no key-value mappings.
+    * Object clone()
+        - It is used to return a shallow copy of the HashMap instance.
+    * Set entrySet()
+        - It is used to return a collection view of the mappings contained in this map.
+    * Set keySet()
+        - It is used to return a set view of the keys contained in this map.
+    * V put(Object key, Object value)
+        - It is used to insert any entry in the map.
+
+
+---------------------------------------------
+ LinkedHashMap
+    * LinkedHashMap class of Java collection framework provides the hash table and
+      the link list implementation of the map interface.
+    * HashMap provided the advantage of quick insertion, search and deletion
+    * but it never maintained the track and order of insertion which the LinkedHashMap provides
+      where the elements can be accessed in their insertion order.
+    * LinkedHashMap extends the HashMap class to store its entries in hash table and
+      internally maintains a doubly linked list among all the entries to order its entries.
+    * (Java LinkedHashMap contains values based on the key)
+    * It's contains unique elements
+    * May have one null key and multiple null values.
+    * Its maintains insertion order
+    * The initial default capacity of Java HashMap class is 16 with a load factor ot 0.75.
+
+    * Syntax
+       LinkedHashMap<Key, Value> numbers = new LinkedHashMap<>(8, 0.6f);
+       //here we can modify capacity and load factor like (8, 0.6f)
+
+ LinkedHashMap Methods
+    * V get(Object key)
+        - It returns the value to which the specified key is mapped.
+    * void clear()
+        - It removes all the key-value pairs from a map
+    * boolean containsValue(Object value)
+        - It returns true if the map maps on or more keys to the specified value.
+    * Set<Map.Entry<K, V>>entrySet()
+        - It returns a Set view of the mappings contained in the map
+    * void forEach(BiConsumer<?super K, ?super V>action)
+        - It performs the given action for each entry in the map until all entries have been processed.
+    * V getOrDefault(Object key, V defaultValue)
+        - It returns the value to which the specified key is mapped.
+
+
+---------------------------------------------------
+ WeakHashMap
+    * WeakHashMap is a Hash table based implementation of the Map interface, with weak keys.
+    * Entry in WeakHashMap, will automatically be removed when its key is no longer in ordinary use.
+    * Both null values and the null key are supported.
+    * This class has performance characteristics similar to those of the HashMap class and
+      has the same efficiency parameters of initial capacity and load factor (16,0.75)
+    * <>(16, 0.75) -> (capacity, loadFactor)
+        - Capacity: Meaning, it can store 16 entries.
+        - loadFactor - This means whenever our hash table is filled by 75%, the entries are moved to
+          a new hash table of double the size of the original hash table.
+
+ WeakHashMap Methods
+    * clear()
+        - Removes all the entries from the map
+    * containsKey()
+        - Checks If the map contains the specified key and returns a boolean value
+    * containsValues()
+        - Checks If the map contains the specified value and returns a boolean value
+    * size()
+        - Returns the size of the map
+    * isEmpty()
+        - Checks if the map is empty and returns a boolean value
+
+
+
+----------------------------------------------------------
+ EnumMap
+    * Java EnumMap class is the specialized Map implementation for enum keys.
+      (EnumMap class of the Java collection framework
+       provides a map implementation for the elements of an enum or the enum keys.)
+    * It inherits Enum and AbstractMap classes.
+    * It's high-performance map implementation, much faster than HashMap because the keys are prescribed.
+    * All keys of each EnumMap instance must be keys of a single enum type.
+    * EnumMap doesn't allow null key and throws NullPointer Exception when we attempt to insert the null key.
+    * EnumMap is internally represented as arrays.
+    * This representation is extremely compact and efficient.
+
+ Advantages of EnumMap
+    * Compact
+    * Type-safe
+    * Sorted Keys
