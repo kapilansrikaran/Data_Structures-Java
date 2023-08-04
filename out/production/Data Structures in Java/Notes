@@ -29,7 +29,7 @@ Data Structure in Java
 
  Learn More: Array in Java
  -  https://www.javatpoint.com/array-in-java
-
+ - https://www.scaler.com/topics/java/one-dimensional-array-in-java/
 ------------------------------------------------------------------------------------------------------------------------
 
  String
@@ -438,3 +438,85 @@ Data Structure in Java
     * Compact
     * Type-safe
     * Sorted Keys
+
+ -------------------------------------------------------------
+ SortedMap
+    * SortedMap is an interface in Java that is a sub-interface of the Map Interface
+    * The map entries are arranged in ascending order, sorted according to their keys.
+    * It ensures that the entries are kept in ascending key order. (as this interface name itself is sorted)
+    * It enables very efficient manipulation of map subsets. (which is cannot create objects from it)
+    * The SortedMap interface is implemented by the TreeMap and ConcurrentSkipListMap classes.
+
+    * Syntax:
+        interface SortedMap<K, V>
+            extends Map<K, V>
+
+    * The main characteristic of a SortedMap is that it orders the keys by their natural ordering,
+      or by a specified comparator
+
+    * So consider using a TreeMap when you want a map that satisfies the following criteria.
+        - null key or null value is not permitted
+        - The keys are sorted either by natural ordering or by a specified comparator.
+
+ Advantages of SortedMap
+    * Sorted Order
+    * Search Performance
+    * Predictable Iteration order
+
+
+ SortedMap Methods
+    * comparator()
+        - returns a comparator that can be used to order keys in a map
+    * firstKey()
+        - returns the first key of the sorted map
+    * lastKey()
+        - return the last key of the shorted
+    * headMap(key)
+        - returns all the entries of a map whose keys are less than the specified key
+    * tailMap(key)
+        - returns all entries of a map whose keys are greater than or equal to specified key
+    * subMap(key1, key2)
+        - returns all the entries of a map whose keys lies in between key 1 snd key2 including key1
+        (subMap which strictly contains keys which fall between toKey and fromKey)
+
+-------------------------------------------------------------
+ Navigable
+    * Provides the feature to navigate among the map entries and it's considered as a type of sorted map.
+    * NavigableMap can be easily accessed and traversed in either ascending or descending key order
+    * The performance and behavior of ascending operations are likely to be faster and
+      efficient than that of the descending order.
+    * It also provide ways to create a Sub Map from existing Map in Java.
+    * It has various implemented features like headMap, tail, and subMap, which allows us to moreover
+      do the focus onto the navigation.
+
+    * Syntax:
+        public interface NavigableMap<K, V> extends SortedMap<K, V>
+
+ NavigableMap Methods
+    * ceilingEntry(K key)
+        - Returns a key-value mapping which is associated with the least key
+          which is greater than or equal to the specified key.
+    * ceilingKey(K key)
+        - Returns the least key which is greater than equal to the specified key.
+    * descendingKeySet()
+        - Returns the reverse order NavigableSet view for the given keys.
+    * descendingMap()
+        - Returns the reverse order view of the mapping present in the map.
+    * firstEntry()
+        - Returns a key-value mapping which is associated with the least key in the given map.
+    * floorEntry(K key)
+        - Returns a key-value mapping which is associated with the greatest key
+          which is less than or equal to the given key.
+
+-------------------------------------------------------------
+TreeMap
+    * Java TreeMap Class of the Java Collection Framework.
+    * Java TreeMap class is a red-black tree based implementation.
+    * It provides an efficient means of storing key-value pairs in sorted order.
+    * Java TreeMap contains values based on the key.
+    * It implements the NavigableMap interface and extends AbstractMap class.
+    * Java TreeMap contains only unique element.
+    * It cannot have a null key but can have multiple null values and maintains ascending order.
+
+
+
