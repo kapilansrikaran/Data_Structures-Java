@@ -605,8 +605,68 @@ Set
         3. Subset
             - To check if x is a subset of y, we can use y.containsAll(x)
 
+-----------------------------------------------------------
+HashSet
+    - Java HashSet class is used to create a collection that uses a hash table for storage.
+    - It inherits the AbstractSet class and implements Set interface.
+    - HashSet stores the elements by using a mechanism called hashing
+    - HashSet contains unique elements only.
+    - HashSet allows null value
+    - HashSet is the best approach for search operations
+    - Here, elements are inserted on the basics of their hashcode.
+    - The initial default capacity of HashSet is 16, and the laod factor is 0.75
+
+    - Declaration of HashSet
+        public class HashSet<E> extends AbstractSet<E>
+        implements Set<E>, Cloneable, Serializable
+
+        // Where E is the type of elements stored in a HashSet
 
 
+----------------------------------------------------------------------
+EnumSet
+    - It extends abstractClass class and implements Set Interface in Java.
+    - It's a high-performance set implementation, much faster than HashSet.
+    - EnumSet does not have public constructors, so we must use the predefined methods to create the EnumSet.
+    - All of the elements in an EnumSet must come from a single enumeration type that is specified
+      when the set is created either explicitly or implicitly.
+    - Id does not allow null Objects and throws NullPointerException if we do so.
+    - It uses a fail-safe iterator,
+      so it won't throw ConcurrentModificationException if the collection is modified while iterating
+    - EnumSet provides an efficient way to store enum values than other set implementations
+      (like HashSet, TreeSet)
+    - An enum set only stores enum values of a specific enum.
+     (we can only insert the element of Enum type. Its because we created our empty Enum module here)
+    - Hence, the JVM already knows all the possible values of set
+    - This is the reason why enum set are internally implemented as a sequence of bits.
+    - Bits specifies whether elements are present in the enum set or not.
+    - The bit of a corresponding element is turned on if that element is present in the set.
+
+    - Declaration:
+        public abstract class EnumSet<E extends Enum<E>>
+
+        //Here, E is the type of element stored.
+
+
+EnumSet Methods
+    - allOf(Class<E> elementType)
+        creates an enum set containing all of the elements in specified element type
+    - clone()
+        Returns copy of this set.
+    - complementOf(EnumSet<E> s)
+        Creates an enum set with the same element type as the specified enum set.
+    - copyOf(Collection<E> c)
+        Creates an enum set initialized from the specified collection.
+    - copyOf(EnumSet<E> s)
+        Creates an enum set with the same element type as the specified enum set,
+        initially containing the same elements(if any)
+    - noneOf(Class<E> elementType)
+        Creates an empty enum set with the specified element type.
+
+
+--------------------------------------------------------------
+LinkedHashSet
+    -
 
 
 

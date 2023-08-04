@@ -334,6 +334,7 @@ Data Structure in Java
     * UnsupportedOperationException
         - This occurs when an attempt is made to change a map which is unmodifiable
 
+ Read More: https://www.geeksforgeeks.org/map-interface-java-examples/
  ---------------------------------------
  HashMap
     * It provides the basic implementation of the Map interface of Java.
@@ -342,6 +343,13 @@ Data Structure in Java
     * This class uses a technique called Hashing.
     * Hashing is a technique of converting a large String to a small String that represents same String.
     * A Shorter value helps in indexing and faster searches.
+    * keys should be unique. If you try to insert the duplicate key,
+      it will replace the element of the corresponding key.
+    * It is easy to perform operations using the key index like updation, deletion, etc
+    * HashMap in Java is like the legacy Hashtable class, but it is not synchronized.
+    * It allows us to store the null elements as well, but there should be only one null key.
+    * It inherits the AbstractMap class and implements the Map interface.
+
 
     * Syntax
         //HashMap creation with 8 capacity and 0.6 load factor
@@ -361,6 +369,7 @@ Data Structure in Java
     * V put(Object key, Object value)
         - It is used to insert any entry in the map.
 
+ Read More:
 
 ---------------------------------------------
  LinkedHashMap
@@ -376,6 +385,9 @@ Data Structure in Java
     * May have one null key and multiple null values.
     * Its maintains insertion order
     * The initial default capacity of Java HashMap class is 16 with a load factor ot 0.75.
+    * The LinkedHashMap Class is just like HashMap with an additional feature of maintaining an order of elements inserted into it
+    *  HashMap provided the advantage of quick insertion, search, and deletion but it never maintained the track and order of insertion, which the LinkedHashMap provides where the elements can be accessed in their insertion order.
+
 
     * Syntax
        LinkedHashMap<Key, Value> numbers = new LinkedHashMap<>(8, 0.6f);
@@ -395,11 +407,15 @@ Data Structure in Java
     * V getOrDefault(Object key, V defaultValue)
         - It returns the value to which the specified key is mapped.
 
+ Read More: https://www.geeksforgeeks.org/linkedhashmap-class-in-java/
 
 ---------------------------------------------------
  WeakHashMap
     * WeakHashMap is a Hash table based implementation of the Map interface, with weak keys.
     * Entry in WeakHashMap, will automatically be removed when its key is no longer in ordinary use.
+    * Storing only weak references allows a key-value pair to be garbage-collected when its key is no longer referenced outside of the WeakHashMap.
+    * This class provides the easiest way to harness the power of weak references. It is useful for implementing "registry-like" data structures, where the utility of an entry vanishes when its key is no longer reachable by any thread.
+    * The WeakHashMap functions identically to the HashMap with one very important exception: if the Java memory manager no longer has a strong reference to the object specified as a key, then the entry in the map will be removed.
     * Both null values and the null key are supported.
     * This class has performance characteristics similar to those of the HashMap class and
       has the same efficiency parameters of initial capacity and load factor (16,0.75)
@@ -420,7 +436,7 @@ Data Structure in Java
     * isEmpty()
         - Checks if the map is empty and returns a boolean value
 
-
+ Read More: https://www.tutorialspoint.com/java/java_weakhashmap_class.htm
 
 ----------------------------------------------------------
  EnumMap
@@ -433,11 +449,15 @@ Data Structure in Java
     * EnumMap doesn't allow null key and throws NullPointer Exception when we attempt to insert the null key.
     * EnumMap is internally represented as arrays.
     * This representation is extremely compact and efficient.
+    * EnumMap is a specialized implementation of the Map interface for enumeration types. It extends AbstractMap and implements the Map interface in Java. It belongs to java.util package.
+
 
  Advantages of EnumMap
     * Compact
     * Type-safe
     * Sorted Keys
+
+ Read More: https://www.geeksforgeeks.org/enummap-class-java-example/
 
  -------------------------------------------------------------
  SortedMap
@@ -457,6 +477,12 @@ Data Structure in Java
     * So consider using a TreeMap when you want a map that satisfies the following criteria.
         - null key or null value is not permitted
         - The keys are sorted either by natural ordering or by a specified comparator.
+
+    * SortedMap is an interface in the collection framework. This interface extends the Map interface and provides a total ordering of its elements (elements can be traversed in sorted order of keys). The class that implements this interface is TreeMap.
+    * The SortedMap interface is a subinterface of the java.util.Map interface in Java. It extends the Map interface to provide a total ordering of its elements, based on the natural order of its keys.
+    * The main difference between a SortedMap and a regular Map is that the elements in a SortedMap are stored in a sorted order, whereas in a Map the elements are stored in an arbitrary order. The sorting order is determined by the natural order of the keys, which must implement the java.lang.Comparable interface, or by a Comparator passed to the SortedMap’s constructor.
+
+
 
  Advantages of SortedMap
     * Sorted Order
@@ -479,6 +505,8 @@ Data Structure in Java
         - returns all the entries of a map whose keys lies in between key 1 snd key2 including key1
         (subMap which strictly contains keys which fall between toKey and fromKey)
 
+ Read More: https://www.geeksforgeeks.org/sortedmap-java-examples/
+
 -------------------------------------------------------------
  Navigable
     * Provides the feature to navigate among the map entries and it's considered as a type of sorted map.
@@ -488,6 +516,10 @@ Data Structure in Java
     * It also provide ways to create a Sub Map from existing Map in Java.
     * It has various implemented features like headMap, tail, and subMap, which allows us to moreover
       do the focus onto the navigation.
+
+    * It is an extension of SortedMap which provides convenient navigation methods like lowerKey, floorKey, ceilingKey and higherKey, and along with this popular navigation method.
+    *  It also provide ways to create a Sub Map from existing Map in Java e.g. headMap whose keys are less than the specified key, tailMap whose keys are greater than the specified key, and a subMap which strictly contains keys which fall between toKey and fromKey.
+
 
     * Syntax:
         public interface NavigableMap<K, V> extends SortedMap<K, V>
@@ -508,6 +540,8 @@ Data Structure in Java
         - Returns a key-value mapping which is associated with the greatest key
           which is less than or equal to the given key.
 
+ Read More: https://www.geeksforgeeks.org/navigablemap-interface-in-java-with-example/
+
 -------------------------------------------------------------
 TreeMap
     * Java TreeMap Class of the Java Collection Framework.
@@ -517,6 +551,125 @@ TreeMap
     * It implements the NavigableMap interface and extends AbstractMap class.
     * Java TreeMap contains only unique element.
     * It cannot have a null key but can have multiple null values and maintains ascending order.
+
+    * The TreeMap in Java is used to implement Map interface and NavigableMap along with the AbstractMap Class.
+    * The map is sorted according to the natural ordering of its keys, or by a Comparator provided at map creation time, depending on which constructor is used.
+    * This proves to be an efficient way of sorting and storing the key-value pairs.
+    * The storing order maintained by the treemap must be consistent with equals just like any other sorted map, irrespective of the explicit comparators.
+    * The treemap implementation is not synchronized in the sense that if a map is accessed by multiple threads, concurrently and at least one of the threads modifies the map structurally, it must be synchronized externally.
+
+Read More: https://www.geeksforgeeks.org/treemap-in-java/
+
+-----------------------------------------------------------------------
+Java ConcurrentHashMap
+    * The ConcurrentHashMap class is introduced in JDK 1.5 belongs to java.util.concurrent package, which implements ConcurrentMap as well as to Serializable interface also.
+      ConcurrentHashMap is an enhancement of HashMap as we know that while dealing with Threads in our application HashMap is not a good choice because performance-wise HashMap is not up to the mark
+    * ConcurrentHashMap is a thread-safe implementation of the Map interface in Java, which means multiple threads can access it simultaneously without any synchronization issues.
+    * It’s part of the java.util.concurrent package and was introduced in Java 5 as a scalable alternative to the traditional HashMap class.
+
+Read More: https://www.geeksforgeeks.org/concurrenthashmap-in-java/
+
+
+
+
+
+
+Set
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+    * The set interface of the Java collection framework provides the feature of the mathematical
+      sets in Java that extends the collection interface.
+    * It is an unordered collection of objects in which duplicate values cannot be store.
+    * It is an interface that implements the mathematical set
+    * This interface contains the methods inherited from the collection interface
+    * A feature that restricts the insertion of the duplicate elements.
+
+    * Declaration:
+        public interface Set extends Collection
+
+    * Since Set is an interface, we cannot create object from it
+    * Use the functionalities of the Set interface, We can use these classes:
+        1. EnumSet
+        2. HashSet
+        3. LinkedHashSet
+        4. TreeSet
+
+    * Set interface is also extended by these sub interfaces:
+        1. SortedSet
+        2. NavigableSet
+
+    * Java Set interface allow us to perform basic mathematical set operations like:
+        1. Union
+            - To get the union of two sets x and y, we acn use x.addAll(y)
+        2. Intersection
+            - To get the intersection of two sets x and y, we can use x.retainAll(y)
+        3. Subset
+            - To check if x is a subset of y, we can use y.containsAll(x)
+
+-----------------------------------------------------------
+HashSet
+    - Java HashSet class is used to create a collection that uses a hash table for storage.
+    - It inherits the AbstractSet class and implements Set interface.
+    - HashSet stores the elements by using a mechanism called hashing
+    - HashSet contains unique elements only.
+    - HashSet allows null value
+    - HashSet is the best approach for search operations
+    - Here, elements are inserted on the basics of their hashcode.
+    - The initial default capacity of HashSet is 16, and the laod factor is 0.75
+
+    - Declaration of HashSet
+        public class HashSet<E> extends AbstractSet<E>
+        implements Set<E>, Cloneable, Serializable
+
+        // Where E is the type of elements stored in a HashSet
+
+
+----------------------------------------------------------------------
+EnumSet
+    - It extends abstractClass class and implements Set Interface in Java.
+    - It's a high-performance set implementation, much faster than HashSet.
+    - EnumSet does not have public constructors, so we must use the predefined methods to create the EnumSet.
+    - All of the elements in an EnumSet must come from a single enumeration type that is specified
+      when the set is created either explicitly or implicitly.
+    - Id does not allow null Objects and throws NullPointerException if we do so.
+    - It uses a fail-safe iterator,
+      so it won't throw ConcurrentModificationException if the collection is modified while iterating
+    - EnumSet provides an efficient way to store enum values than other set implementations
+      (like HashSet, TreeSet)
+    - An enum set only stores enum values of a specific enum.
+     (we can only insert the element of Enum type. Its because we created our empty Enum module here)
+    - Hence, the JVM already knows all the possible values of set
+    - This is the reason why enum set are internally implemented as a sequence of bits.
+    - Bits specifies whether elements are present in the enum set or not.
+    - The bit of a corresponding element is turned on if that element is present in the set.
+
+    - Declaration:
+        public abstract class EnumSet<E extends Enum<E>>
+
+        //Here, E is the type of element stored.
+
+
+EnumSet Methods
+    - allOf(Class<E> elementType)
+        creates an enum set containing all of the elements in specified element type
+    - clone()
+        Returns copy of this set.
+    - complementOf(EnumSet<E> s)
+        Creates an enum set with the same element type as the specified enum set.
+    - copyOf(Collection<E> c)
+        Creates an enum set initialized from the specified collection.
+    - copyOf(EnumSet<E> s)
+        Creates an enum set with the same element type as the specified enum set,
+        initially containing the same elements(if any)
+    - noneOf(Class<E> elementType)
+        Creates an empty enum set with the specified element type.
+
+
+
+
+
+
+
+
 
 
 
